@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Due: Weeks to Months
+      Semanas? Quantos meses é isso?
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-item>
-      <ion-label fixed>Weeks</ion-label>
+      <ion-label fixed>Semanas</ion-label>
       <ion-input type="number" [(ngModel)]="form.weeks" (keyup)="convert(weeks.value)" #weeks></ion-input>
     </ion-item>
     <div class="months">
@@ -17,8 +17,8 @@
       </div>
       <mat-progress-spinner *ngIf="form.months != -1" mode="determinate" value="{{form.months/9*100}}">
       </mat-progress-spinner><br />
-      <h1 *ngIf="form.months == 1">Month</h1>
-      <h1 *ngIf="form.months != 1 && form.months != -1">Months</h1>
-      <h1 *ngIf="form.months == -1">Come on! Be serious.</h1>
+      <h1 *ngIf="form.months == 1">Mês</h1>
+      <h1 *ngIf="form.months != 1 && form.months != -1">Meses</h1>
+      <h1 *ngIf="form.months == -1">Qualé, fala sério! Só sei traduzir gestações de humanos.</h1>
     </div>
 </ion-content>

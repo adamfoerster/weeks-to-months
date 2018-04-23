@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "Semanas para Meses",
+  "short_name": "Semanas",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
