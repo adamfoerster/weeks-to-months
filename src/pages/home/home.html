@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Due: Weeks to Months
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-item>
+      <ion-label fixed>Weeks</ion-label>
+      <ion-input type="number" [(ngModel)]="form.weeks" (keyup)="convert(weeks.value)" #weeks></ion-input>
+    </ion-item>
+    <div class="months">
+      <div *ngIf="form.months != -1" class="wrapper">
+        <h1>{{form.months}}</h1>
+      </div>
+      <mat-progress-spinner *ngIf="form.months != -1" mode="determinate" value="{{form.months/9*100}}">
+      </mat-progress-spinner><br />
+      <h1 *ngIf="form.months == 1">Month</h1>
+      <h1 *ngIf="form.months != 1 && form.months != -1">Months</h1>
+      <h1 *ngIf="form.months == -1">Come on! Be serious.</h1>
+    </div>
 </ion-content>
